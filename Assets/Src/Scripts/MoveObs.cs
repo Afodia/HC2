@@ -18,7 +18,6 @@ public class MoveObs : MonoBehaviour
     public void SetSpeed(float newSpeed)
     {
         speed = newSpeed;
-        return;
     }
 
     private void Update()

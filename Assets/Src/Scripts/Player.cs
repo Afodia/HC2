@@ -93,8 +93,8 @@ namespace YsoCorp {
             this.speed = Mathf.Clamp(this.speed, 0, SPEED);
             if (this.speed != 0) {
                 this._rigidbody.MovePosition(this._rigidbody.position + this.transform.forward * this.speed * Time.fixedDeltaTime + this._slideMove);
-                this._rigidbody.MoveRotation(Quaternion.RotateTowards(this._rigidbody.rotation, this._rotation, SPEED_ROTATION));
-                this._slideMove = Vector3.zero;
+                //this._rigidbody.MoveRotation(Quaternion.RotateTowards(this._rigidbody.rotation, this._rotation, SPEED_ROTATION));
+                //this._slideMove = Vector3.zero;
 
                 if (this.preventFall == true) {
                     this.BlockPlayerFromFalling();
@@ -129,7 +129,7 @@ namespace YsoCorp {
         }
 
         private void Slide(float deltaX) {
-            this._slideMove = new Vector3(deltaX * MOVE_SENSITIVITY, 0 , 0);
+            //this._slideMove = new Vector3(deltaX * MOVE_SENSITIVITY, 0 , 0);
         }
 
         public override void GesturePanUp() {

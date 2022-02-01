@@ -83,6 +83,7 @@ namespace YsoCorp {
             this.map = Instantiate(this.resourcesManager.GetMap(), this.transform).GetComponent<Map>();
             this.player.Reset();
             this.GetComponent<PanController>().Reset();
+            this.map.LaunchMap(this.resourcesManager.GetConfig());
         }
 
         void HideAllMenus() {
